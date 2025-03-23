@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	  <title>Visita</title>
+	  <link rel="stylesheet" type="text/css" href="camino.css">
+	</head>
+	<body>
+	  <?php
+		$jesuita = $_GET["jesuita"];
+		echo "<h1>Hola " . $jesuita . "</h1>";
+	  ?>
+	  <form action="ciudad.html" method="get">
+		<input type="hidden" id="ip" name="ip" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>">
+		<label for="ciudad">Selecciona una ciudad:</label><br>
+		<select id="ciudad" name="ciudad">
+		  <option value="Madrid">Madrid</option>
+		  <option value="Barcelona">Barcelona</option>
+		  <option value="Sevilla">Sevilla</option>
+		</select><br><br>
+		<input type="submit" value="Enviar">
+	  </form>
+	</body>
+</html>
