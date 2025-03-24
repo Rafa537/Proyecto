@@ -1,14 +1,21 @@
+<?php
+// Recoger los datos enviados desde visitas.html
+$jesuita = $_GET["jesuita"] ?? "Desconocido";
+$codigo = $_GET["codigo"] ?? "N/A";
+$ip = $_GET["ip"] ?? "N/A";
+$ciudad = $_GET["ciudad"] ?? "Desconocida";
+?>
+
 <!DOCTYPE html>
 <html>
 	<head>
-	  <title>Ciudad</title>
-	  <link rel="stylesheet" type="text/css" href="camino.css">
+		<title>Ciudad</title>
+		<link rel="stylesheet" type="text/css" href="camino.css">
 	</head>
 	<body>
-	  <?php
-		$ciudad = $_GET["ciudad"];
-		echo "<h1>Información sobre " . $ciudad . "</h1>";
-		// Aquí puedes agregar información sobre la ciudad seleccionada
-	  ?>
+		<h1>Información sobre <?php echo $ciudad; ?></h1>
+		<p><strong>Jesuita:</strong> <?php echo $jesuita; ?></p>
+		<p><strong>Código:</strong> <?php echo $codigo; ?></p>
+		<p><strong>IP:</strong> <?php echo $ip; ?></p>
 	</body>
 </html>

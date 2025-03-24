@@ -9,7 +9,7 @@
 		$jesuita = $_GET["jesuita"];
 		echo "<h1>Hola " . $jesuita . "</h1>";
 	  ?>
-	  <form action="ciudad.html" method="get">
+	  <form action="ciudad.php" method="post">
 		<input type="hidden" id="ip" name="ip" value="<?php echo $_SERVER['REMOTE_ADDR']; ?>">
 		<label for="ciudad">Selecciona una ciudad:</label><br>
 		<select id="ciudad" name="ciudad">
